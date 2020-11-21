@@ -17,7 +17,7 @@ class CreateUserOrganisationsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('organisation_id');
-            $table->string('access_level');
+            $table->boolean('organisation_owner')->default(false);
             $table->boolean('default')->default(false);
             $table->timestamps();
         });
